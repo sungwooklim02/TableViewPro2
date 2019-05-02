@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var myTableView: UITableView!
-    var animals = ["cat","dog","cow","pig","horse"]
+    var animals = ["cat","Bird","Whale","Pig","Horse"]
     var year = ["3","4","5","6","6"]
     override func viewDidLoad() {
         myTableView.dataSource = self
@@ -34,9 +34,14 @@ class ViewController: UIViewController, UITableViewDataSource {
         let row = indexPath.row
         print("section : \(indexPath.section) row :\(indexPath.row)")
             
-            cell.textLabel?.text = animals[row]
-            cell.detailTextLabel?.text = year[row]
-            return cell
+        cell.textLabel?.text = animals[row]
+        cell.detailTextLabel?.text = year[row]
+        
+        //image 넣기
+        cell.imageView?.image = UIImage(named: animals[row])
+        
+        
+        return cell
     }
     
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
