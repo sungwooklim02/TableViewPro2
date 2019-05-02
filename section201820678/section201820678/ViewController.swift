@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         myTableView.dataSource = self
         
-    }
+    }//l,
     
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
