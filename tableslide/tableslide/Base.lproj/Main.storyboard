@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tableslide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="jgG-5T-s4E">
+                                <rect key="frame" x="21" y="80" width="332" height="31"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZpM-qk-Myg"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tId-Jk-QFR">
+                                <rect key="frame" x="166.5" y="150" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GkH-9C-Ye5">
+                                <rect key="frame" x="0.0" y="211" width="375" height="456"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GkH-9C-Ye5" firstAttribute="top" secondItem="tId-Jk-QFR" secondAttribute="bottom" constant="40" id="3So-3p-JTt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GkH-9C-Ye5" secondAttribute="bottom" id="Kh9-ET-qpQ"/>
+                            <constraint firstItem="tId-Jk-QFR" firstAttribute="top" secondItem="jgG-5T-s4E" secondAttribute="bottom" constant="40" id="XpB-po-zex"/>
+                            <constraint firstItem="tId-Jk-QFR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cLC-TA-gu2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GkH-9C-Ye5" secondAttribute="trailing" id="gzT-mc-bbG"/>
+                            <constraint firstItem="jgG-5T-s4E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="noz-jJ-Qlg"/>
+                            <constraint firstItem="GkH-9C-Ye5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="szY-uC-McK"/>
+                            <constraint firstItem="jgG-5T-s4E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zyK-di-aLZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myLable" destination="tId-Jk-QFR" id="AfP-vQ-Cdh"/>
+                        <outlet property="myTableView" destination="GkH-9C-Ye5" id="vtc-aL-eL4"/>
+                        <outlet property="myslider" destination="jgG-5T-s4E" id="cha-Se-j9D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
