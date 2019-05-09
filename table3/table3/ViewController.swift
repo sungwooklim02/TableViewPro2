@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
     @IBOutlet weak var myTableView: UITableView!
@@ -32,7 +32,23 @@ class ViewController: UIViewController, UITableViewDataSource{
         myCell.imageView?.image = UIImage(named: animals[myRow])
         return myCell
     }
-
+    
+ //   public func numberOfSections(in tableView: UITableView) -> Int {
+ //       return 2
+ //   }
+    
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section Header \(section)"
+    }
+    
+    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "Section Footer \(section)"
+    }
+    
+    
 
 }
+
+
+
 
